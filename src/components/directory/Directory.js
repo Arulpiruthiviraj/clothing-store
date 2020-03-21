@@ -1,14 +1,18 @@
 import React from 'react'
-import { MenuItem } from '../menu-items/MenuItem'
 import sections from './directoryData'
 import './directory.scss'
+import MenuItem from '../menu-items/MenuItem'
+
+
+
 export default function Directory() {
     return (
         <div className="directory-menu">
-            {sections.map(({title,imageUrl,id,size})=>
+            {sections.map(({id,...otherSectionProps})=>
                (
-                   <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
-               ) )}
+                   <MenuItem key={id} {...otherSectionProps}/>
+               )
+                )}
         </div>
     )
 }
