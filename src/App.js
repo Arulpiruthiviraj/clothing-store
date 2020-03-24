@@ -18,9 +18,10 @@ const unSubcribeFromAuth=()=>null;
 
 useEffect(() => {
   auth.onAuthStateChanged(user=>{
-    setCurrentUser({currentUser:user})
+    setCurrentUser(user)
   })
   return function cleanup() {
+    console.log("unsubribe")
     unSubcribeFromAuth();
   };
 }, []);
