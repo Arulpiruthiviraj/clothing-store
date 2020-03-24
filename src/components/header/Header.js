@@ -12,6 +12,7 @@ function Header() {
             <div className="options">
                <Link to="/shop" className="option">SHOP</Link>
                <Link to="/shop" className="option">CONTACT</Link>
+               <Link to="/signin" className="option">SIGNIN</Link>
             </div>
         </div>
     )
