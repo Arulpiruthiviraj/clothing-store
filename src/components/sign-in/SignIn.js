@@ -37,9 +37,9 @@ function SignIn({props}) {
                 value={signInData.password} 
                 handleChange={handleChange}
                 label="Password" required/>
-                <div className="single-line">   
+                <div className="buttons">   
                 <CustomButton type="submit">Sign In</CustomButton> 
-                <CustomButton onClick={signInWithGoogle}>Sign In wih Google</CustomButton> 
+                <CustomButton onClick={signInWithGoogle} isGoogleSignIn>Sign In wih Google</CustomButton> 
                 </div>  
             </form>
         </div>

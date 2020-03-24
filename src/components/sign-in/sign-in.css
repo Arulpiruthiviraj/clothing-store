@@ -10,3 +10,7 @@
   display: flex;
   justify-content: flex-end;
 }
+.sign-in .buttons {
+  display: flex;
+  justify-content: space-between;
+}
