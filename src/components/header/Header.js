@@ -5,7 +5,7 @@ import {ReactComponent as Logo} from "../../assets/crown.svg"
 import {auth} from "../../firebase/FirebaseUtils"
 
 function Header({currentUser}) {
-    console.log(currentUser? (9):(7))
+    console.log(currentUser)
     return (
         <div className="header">
             <Link to="/">

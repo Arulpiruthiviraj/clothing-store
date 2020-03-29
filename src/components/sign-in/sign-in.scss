@@ -1,14 +1,14 @@
 .sign-in{
-    width:30vw;
+    width:380px;
     display: flex;
     flex-direction: column;
     .title{
     margin:10px 0;
     }
-    .single-line{
-        display: flex;
-        justify-content: flex-end;
-    }
+    // .single-line{
+    //     display: flex;
+    //     justify-content: flex-end;
+    // }
     .buttons{
         display: flex;
         justify-content: space-between;
