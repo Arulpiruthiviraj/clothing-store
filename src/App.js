@@ -5,7 +5,7 @@ import ShopPage from './pages/shop/ShopPage';
 import "./App.css";
 import Header from './components/header/Header';
 import { SignInUp } from './pages/sign-in-out/SignInUp';
-import {auth} from "./firebase/FirebaseUtils.js"
+import {auth,createUserProfileDocument} from "./firebase/FirebaseUtils.js"
 
 
 
@@ -17,8 +17,9 @@ const[currentUser,setCurrentUser]=useState(null)
 const unSubcribeFromAuth=()=>null;
 
 useEffect(() => {
-  auth.onAuthStateChanged(user=>{
-    setCurrentUser(user)
+  auth.onAuthStateChanged(async user=>{
+    createUserProfileDocument(user);
+    // setCurrentUser(user)
   })
   return function cleanup() {
     console.log("unsubribe")
