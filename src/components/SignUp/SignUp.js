@@ -12,10 +12,10 @@ function SignUp() {
     const[signUpData,setSignUpData]=useState(initialSignUpFormState)
 
 
+
    const handleSubmit=async event=>{
        event.preventDefault();
-       console.log(" hey all how are you  ",signUpData)
-
+       
        if(signUpData.password !==  signUpData.confirmPassword){
         alert("Password don't match")
         return;
@@ -23,11 +23,11 @@ function SignUp() {
 
        try {
            const {user} = await auth.createUserWithEmailAndPassword(signUpData.email,signUpData.password);
-          await createUserProfileDocument(user, signUpData.displayName)
-          setSignUpData(null)
+          await createUserProfileDocument(user,{displayName:signUpData.displayName})
+          setSignUpData(initialSignUpFormState)
 
        }catch (err) {
-           console.error(err)
+           console.error("error is  ",err)
        }
     
     }
@@ -45,7 +45,7 @@ function SignUp() {
                 type="text"
                 name="displayName"
                 value={signUpData.displayName}
-                onChange={handleChange}
+                handleChange={handleChange}
                 label="Display Name"
                 required
                 />
@@ -53,7 +53,7 @@ function SignUp() {
                 type="email"
                 name="email"
                 value={signUpData.email}
-                onChange={handleChange}
+                handleChange={handleChange}
                 label="E-Mail"
                 required
                 />
@@ -61,7 +61,7 @@ function SignUp() {
                 type="password"
                 name="password"
                 value={signUpData.password}
-                onChange={handleChange}
+                handleChange={handleChange}
                 label="Password"
                 required
                 />
@@ -69,7 +69,7 @@ function SignUp() {
                 type="password"
                 name="confirmPassword"
                 value={signUpData.confirmPassword}
-                onChange={handleChange}
+                handleChange={handleChange}
                 label=" Confirm Password"
                 required
                />

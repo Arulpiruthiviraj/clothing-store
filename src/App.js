@@ -25,7 +25,6 @@ useEffect(() => {
         ...snapShot.data()}
         )
       })
-      console.log(userAuth)
     }
     setCurrentUser(userAuth)
     })
