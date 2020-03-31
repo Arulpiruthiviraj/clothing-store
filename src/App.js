@@ -17,10 +17,18 @@ const[currentUser,setCurrentUser]=useState(null)
 const unSubcribeFromAuth=()=>null;
 
 useEffect(() => {
-  auth.onAuthStateChanged(async user=>{
-    createUserProfileDocument(user);
-    // setCurrentUser(user)
-  })
+  auth.onAuthStateChanged(async userAuth=>{
+    if (userAuth){
+      const userRef=await createUserProfileDocument(userAuth);
+      userRef.onSnapshot(snapShot=>{
+        setCurrentUser({id:snapShot.id,
+        ...snapShot.data()}
+        )
+      })
+      console.log(userAuth)
+    }
+    setCurrentUser(userAuth)
+    })
   return function cleanup() {
     console.log("unsubribe")
     unSubcribeFromAuth();
