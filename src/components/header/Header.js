@@ -3,8 +3,14 @@ import "./header.scss"
 import { Link } from 'react-router-dom'
 import {ReactComponent as Logo} from "../../assets/crown.svg"
 import {auth} from "../../firebase/FirebaseUtils"
+import {useSelector} from "react-redux"
+import { CartIcon } from '../cart-icon/cartIcon'
 
-function Header({currentUser}) {
+
+
+
+function Header() {
+      const currentUser=useSelector((state) => state.user.currentUser);
 
     return (
         <div className="header">
@@ -20,9 +26,13 @@ function Header({currentUser}) {
                : 
                (<Link to="/signin" className="option">SIGN IN</Link>)
                }
+               <CartIcon/>
             </div>
         </div>
     )
 }
+
+
+
 
 export default Header
