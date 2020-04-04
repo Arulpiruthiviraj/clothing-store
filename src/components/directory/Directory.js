@@ -1,5 +1,5 @@
 import React from 'react'
-import sections from './directoryData'
+import sections from '../../data/directoryData'
 import './directory.scss'
 import MenuItem from '../menu-items/MenuItem'
 

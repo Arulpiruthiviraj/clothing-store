@@ -22,6 +22,12 @@
   background-position: center;
   background-size: cover;
 }
+.menu-item:hover {
+  opacity: 0.88;
+}
+.menu-item:hover .content {
+  opacity: 0.8;
+}
 .menu-item.large {
   height: 380px;
 }

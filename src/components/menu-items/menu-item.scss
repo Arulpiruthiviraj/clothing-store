@@ -24,6 +24,13 @@
     background-position: center;
     background-size: cover;
 
+    &:hover {
+      opacity: 0.88;
+      .content{
+        opacity:0.8;
+      }
+    }
+
     &.large{
       height: 380px;
     }

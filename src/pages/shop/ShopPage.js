@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import SHOP_DATA from './shopData'
+import SHOP_DATA from '../../data/shopData'
 import CollectionPreview from '../../components/preview-collection/CollectionPreview'
 
 

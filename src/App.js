@@ -20,7 +20,7 @@ useEffect(() => {
     if (userAuth){
       const userRef=await createUserProfileDocument(userAuth);
       userRef.onSnapshot(snapShot=>{
-        dispatch( setCurrentUser({id:snapShot.id,
+        dispatch(setCurrentUser({id:snapShot.id,
         ...snapShot.data()}
         ))
       })
