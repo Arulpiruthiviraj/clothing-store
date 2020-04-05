@@ -5,6 +5,7 @@
     height: 350px;
     align-items: center;
     position: relative;
+
   
     .image {
       width: 100%;
@@ -12,6 +13,9 @@
       background-size: cover;
       background-position: center;
       margin-bottom: 5px;
+      border: 1px solid rgb(14, 15, 15);
+     
+
     }
   .custom-button {
     widows: 80%;
@@ -43,6 +47,7 @@
   
       .price {
         width: 10%;
+        color:red
       }
     }
   }

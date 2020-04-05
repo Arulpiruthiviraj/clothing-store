@@ -12,6 +12,7 @@
   background-size: cover;
   background-position: center;
   margin-bottom: 5px;
+  border: 1px solid #0e0f0f;
 }
 .collection-item .custom-button {
   widows: 80%;
@@ -40,4 +41,5 @@
 }
 .collection-item .collection-footer .price {
   width: 10%;
+  color: red;
 }
