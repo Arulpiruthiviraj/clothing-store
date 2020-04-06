@@ -8,6 +8,7 @@ import { SignInUp } from './pages/sign-in-out/SignInUp';
 import {auth,createUserProfileDocument} from "./firebase/FirebaseUtils.js"
 import {useSelector,useDispatch} from "react-redux"
 import {setCurrentUser} from './redux/user/userAction.js'
+import CheckoutPage from './pages/checkout-page/CheckoutPage';
 
 
 function App() {
@@ -40,6 +41,8 @@ useEffect(() => {
        <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage}/>
+          <Route exact  path="/check-out" component={CheckoutPage}/>
+
           <Route exact path="/signin"  render={() => (currentUser?(
           <Redirect to="/"/>)
           :

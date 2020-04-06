@@ -6,12 +6,12 @@ import {auth} from "../../firebase/FirebaseUtils"
 import {useSelector} from "react-redux"
 import { CartIcon } from '../cart-icon/cartIcon'
 import CartDropDown from '../cart-dropdown/CartDropDown'
-
-
+import {selectCartHidden} from "../../redux/cart/cartSelector"
+import {selectCurrentUser} from "../../redux/user/userSelector"
 
 function Header() {
-      const currentUser=useSelector((state) => state.user.currentUser);
-      const hidden=useSelector((state) => state.cart.hidden);
+      const currentUser=useSelector((state) => selectCurrentUser(state));
+      const hidden=useSelector((state) => selectCartHidden(state));
     return (
         <div className="header">
             <Link to="/">
