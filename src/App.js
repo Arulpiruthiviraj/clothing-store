@@ -43,7 +43,8 @@ useEffect(() => {
           <Route path="/shop" component={ShopPage}/>
           <Route exact  path="/check-out" component={CheckoutPage}/>
 
-          <Route exact path="/signin"  render={() => (currentUser?(
+          <Route exact path="/signin"  
+          render={() => (currentUser?(
           <Redirect to="/"/>)
           :
           (<SignInUp/>))}/>
