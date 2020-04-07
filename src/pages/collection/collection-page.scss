@@ -11,9 +11,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
+    @media only screen and (max-width:800px){
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      height: 60vh;
+      align-items: center;
+        }
 
     & .collection-item {
       margin-bottom: 30px;
+    
     }
   }
 }

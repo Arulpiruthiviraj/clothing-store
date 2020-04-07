@@ -21,14 +21,6 @@
   top: 255px;
   display: none;
 }
-@media only screen and (max-width: 800px) {
-  .collection-item .custom-button {
-    display: block;
-    opacity: 0.9;
-    min-width: unset;
-    padding: 0 10px;
-  }
-}
 .collection-item:hover .image {
   opacity: 0.8;
 }
