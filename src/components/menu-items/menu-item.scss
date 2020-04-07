@@ -42,6 +42,9 @@
     &:last-child {
       margin-left: 7.5px;
     }
+    @media only screen and (max-width:800px){
+      height: 380px;
+  }
   
     .content {
       height: 90px;

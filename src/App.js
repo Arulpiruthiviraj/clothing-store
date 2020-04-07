@@ -2,7 +2,7 @@ import React,{useEffect}from 'react';
 import HomePage from './pages/homepage/HomePage';
 import { Route, Switch,Redirect} from 'react-router';
 import ShopPage from './pages/shop/ShopPage';
-import "./App.css";
+import {GlobalStyle} from './components/global-styles/GlobalStyle';
 import Header from './components/header/Header';
 import { SignInUp } from './pages/sign-in-out/SignInUp';
 import {auth,createUserProfileDocument} from "./firebase/FirebaseUtils.js"
@@ -37,6 +37,7 @@ useEffect(() => {
 
   return (
     <div className="App">
+      <GlobalStyle/>
        <Header/>
        <Switch>
           <Route exact path="/" component={HomePage} />

@@ -5,10 +5,23 @@
   justify-content: space-between;
   margin-bottom: 25px;
 }
+@media only screen and (max-width: 800px) {
+  .header {
+    height: 60px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
 .header .logo-container {
   height: 100px;
   width: 100px;
   padding: 25px;
+}
+@media only screen and (max-width: 800px) {
+  .header .logo-container {
+    width: 50px;
+    padding: 0;
+  }
 }
 .header .options {
   width: 50%;
@@ -16,6 +29,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+@media only screen and (max-width: 800px) {
+  .header .options {
+    width: 80%;
+  }
 }
 .header .options .option {
   padding: 10px 15px;
