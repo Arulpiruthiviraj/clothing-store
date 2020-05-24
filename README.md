@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AprApparels
+
+AprApparel is a SPA developed with [ React](https://github.com/facebook/create-react-app)and  [Redux](https://react-redux.js.org/introduction/quick-start)
+## Visiting the site
+
+To visit the site [AprApparels](https://apr-apparels.herokuapp.com/)
+
 
 ## Available Scripts
 
